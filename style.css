@@ -14,9 +14,9 @@ body{
 }
 
 .top-container h1{
-    color: rgb(170, 167, 167);
-    font-size: 75px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(177, 157, 209);
+    font-size: 55px;
+    font-family: cursive, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
 }
 
@@ -28,11 +28,12 @@ body{
 .navbar{
     display: flex;
     position: fixed;
-    background-color: white;
+    background-color: rgb(134, 121, 148);
     width: 100%;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgb(0,0,0,.3);
+    transition: background-color 0.4s;
 
 }
 
@@ -45,11 +46,28 @@ body{
 .navbar ul li a{
     text-decoration: none;
     margin: 0 10px;
-    color: black;
+    color: rgb(75, 30, 117);
     font-family: cursive;
 }
 
 .navbar ul li a:hover{
+    color: greenyellow;
+
+}
+  
+.navbar.active{
+    background-color: rgb(52, 83, 59);
+
+}
+
+.navbar.active ul li a {
+    color: white;
+}
+
+/*extra class*/
+
+
+.navbar.active ul li a:hover{
     color: greenyellow;
 
 }
