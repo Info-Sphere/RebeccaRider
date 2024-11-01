@@ -1,4 +1,4 @@
-const navbarEl = document.querySelector(".navbar");
+/*const navbarEl = document.querySelector(".navbar");
 
 
 const bottomContainerE1 = document.querySelector(".bottom-container");
@@ -13,5 +13,5 @@ window.addEventListener("scroll", ()=> {
     }else{
         navbarEl.classList.remove("active"); 
     }
-});
+});*/
 
