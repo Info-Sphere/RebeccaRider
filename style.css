@@ -30,6 +30,7 @@ body{
     transform: translate(-50%, -50%);
     color: rgb(252, 249, 253);
     font-size: 45px;
+    cursor: pointer;
   }
 
 .header{
@@ -81,11 +82,12 @@ body{
 }*/
 
 .navbar a {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
     font-size: 1rem;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
 }
 
 #check {
@@ -100,6 +102,10 @@ body{
     color:#fff;
     cursor: pointer;
     display: none;
+ }
+
+ a:hover{
+    color: rgb(168, 154, 29);
  }
 
  /* BreakPoints*/
