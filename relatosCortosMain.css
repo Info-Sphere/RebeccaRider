@@ -13,7 +13,7 @@ body{
     background: url(relatosCortos.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    filter: opacity(.5);
+    filter: opacity(1);
 }
 
 .titulo h1{
