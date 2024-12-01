@@ -20,14 +20,14 @@ body{
     margin-top: 2%;
     text-align: center;
     font-weight: 900;
-
+    font-size: 1.5rem;
 }
 
 .menu a{
     text-decoration: none;
     color:black;
     font-weight: 900;
-    font-size: 15px;
+    font-size: 1.5rem;
     cursor: pointer;
     margin-left: 45%;
     /*transform: translate(-50%);*/
