@@ -3,18 +3,37 @@
     padding:0;
     box-sizing: border-box;
     font-family: "birthstone", sans-serif;
-    background-color: black;
-    color: white;
+    /*background-color: black;*/
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    color: black;
+}
+
+body{
+    min-height: 100vh;
+    background: url(../archived/images/cuandoTeConoci.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: opacity(1);
 }
 
 h1{
     position: absolute;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(252, 249, 253);
-    font-size: 45px;
-    cursor: pointer;
+    margin-top: 1%;
+    margin-left: 5%;
 }
 
+h2{
+    position: absolute;
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 5%;
+    font-size: .8rem;
+}
+
+p{
+    position: absolute;
+    text-align:start;
+    margin-top: 8%;
+    margin-left: 5%;
+}
