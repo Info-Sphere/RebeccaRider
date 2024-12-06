@@ -5,37 +5,60 @@
     font-family: "birthstone", sans-serif;
     /*background-color: black;*/
     font-family: "Edu AU VIC WA NT Pre", cursive;
-    color: white;
+    color:white;
 }
 
 body{
     min-height: 100vh;
-    background: url(relatosCortos.jpg) no-repeat;
+    background: url(../archived/images/background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    filter: opacity(1);
+    overflow: hidden;
+}
+
+.main{
+  position:relative;
+  min-height:100vh;
+  overflow: hidden;
+}
+
+.titulo{
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 300px;
+  height: 400px;
+}
+
+.menu{
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 8%;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
 }
 
 .titulo h1{
-    margin-top: 2%;
     text-align: center;
     font-weight: 900;
     font-size: 1.5rem;
+    
 
 }
 
 .menu a{
+  position:absolute;
     text-decoration: none;
-    color:black;
+    color:white;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    margin-left: 1%;
     /*transform: translate(-50%);*/
 }
 
 .menu li a:hover{
-    color: white;
+    color: rgb(207, 85, 156);
     font-weight: 900;
 }
 /*.titulo h1:hover{
@@ -47,7 +70,7 @@ body{
 .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 100px;
+    height: 150px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
 /* This container is needed to position the front and back side */
@@ -88,6 +111,143 @@ body{
 
   /*--------------------------End of flip card---------------------------*/
   
+/* -------------------------- BreakPoints ------------------------------*/
 
 
+/*-------------------------------------xxx 992px xxx------------------------------*/
+@media (max-width: 992px) {
+  .titulo{
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 25%;
+    height: 25%;
+    transition: .5s ease;
+  }
+  .main{
+    position:relative;
+    min-height:100vh;
+    overflow: hidden;
+  }
+  .menu{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 8%;
+    width: 40%;
+    height: 70%;
+    overflow: hidden;
+  }
+  
+  .titulo h1{
+      text-align: center;
+      font-weight: 900;
+      font-size: 1rem;
+      
+  
+  }
+  
+  .menu a{
+    position:absolute;
+    display: inline;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: .5s ease;
+      /*transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.20s * var(--i));*/
+      /*transform: translate(-50%);*/
+  }
+}
+/*-------------------------------------xxx 768px xxx------------------------------*/
+@media (max-width: 768px) {
+  .titulo{
+    background-color:gree;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 25%;
+    height: 25%;
+    transition: .5s ease;
+  }
+  .main{
+    position:relative;
+    min-height:100vh;
+    overflow: hidden;
+  }
+  .menu{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 8%;
+    width: 40%;
+    height: 70%;
+    overflow: hidden;
+  }
+  
+  .titulo h1{
+      text-align: center;
+      font-weight: 900;
+      font-size: 1rem;
+  }
+  
+  .menu a{
+    position:absolute;
+    display: inline;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: .5s ease;
+      /*transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.20s * var(--i));*/
+      /*transform: translate(-50%);*/
+  }
+}
 
+/*-------------------------------------xxx 624 xxx------------------------------*/
+@media (max-width: 624px) {
+  .titulo{
+    background-color:gree;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 25%;
+    height: 25%;
+    transition: .5s ease;
+  }
+  .main{
+    position:relative;
+    min-height:100vh;
+    overflow: hidden;
+  }
+  .menu{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 8%;
+    width: 40%;
+    height: 70%;
+    overflow: hidden;
+  }
+  
+  .titulo h1{
+      text-align: center;
+      font-weight: 900;
+      font-size: 1rem;
+  }
+  
+  .menu a{
+    position:absolute;
+    display: inline;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: .5s ease;
+      /*transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.20s * var(--i));*/
+      /*transform: translate(-50%);*/
+  }
+}

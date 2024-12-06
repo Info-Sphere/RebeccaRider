@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: "birthstone", sans-serif;
+    /*font-family: "birthstone", sans-serif;*/
     /*background-color: black;*/
     font-family: "Edu AU VIC WA NT Pre", cursive;
     color: black;
@@ -10,30 +10,180 @@
 
 body{
     min-height: 100vh;
-    background: url(cuandoTeConoci.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    filter: opacity(1);
+    /*filter: opacity(1);*/
+}
+
+.mainContainer{
+    background-color: rgb(247, 248, 248);
+}
+
+.titulo{
+    position:relative;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.text{
+    position:relative;
+    
 }
 
 h1{
-    position: absolute;
-    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
     margin-top: 1%;
     margin-left: 5%;
 }
 
 h2{
-    position: absolute;
-    text-align: center;
-    margin-top: 4%;
-    margin-left: 5%;
+    position: relative;
+    margin-top: 1%;
+    margin-left: 8%;
     font-size: .8rem;
 }
 
 p{
-    position: absolute;
+    position: relative;
     text-align:start;
+    font-size: 1rem;
     margin-top: 8%;
     margin-left: 5%;
 }
+
+/*-------------------------------------xxx 992px xxx------------------------------*/
+@media (max-width: 992px) {
+    .mainContainer{
+        display: flex;
+        background-color: rgb(247, 248, 248);
+    }
+    
+    .titulo{
+        position: sticky;
+        top:0;
+        width: 25%;
+        height: 25%;
+        text-align: center;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+    
+    .text{
+        position:relative;
+        font-size: 1.5rem;
+        
+    }
+    
+    h1{
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    
+    h2{
+        position: relative;
+        margin-top: 1%;
+        margin-left: 8%;
+        font-size: .8rem;
+    }
+    
+    p{
+        position: relative;
+        text-align:start;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+    
+    
+  /*-------------------------------------xxx 768px xxx------------------------------*/
+  @media (max-width: 768px) {
+    .mainContainer{
+        display: flex;
+        background-color: rgb(247, 248, 248);
+    }
+    
+    .titulo{
+        position: sticky;
+        top:0;
+        width: 25%;
+        height: 25%;
+        text-align: center;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+    
+    .text{
+        position:relative;
+        font-size: 1.5rem;
+    }
+    
+    h1{
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    
+    h2{
+        position: relative;
+        margin-top: 1%;
+        margin-left: 8%;
+        font-size: .8rem;
+    }
+    
+    p{
+        position: relative;
+        text-align:start;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+    
+  
+  /*-------------------------------------xxx 624 xxx------------------------------*/
+  @media (max-width: 624px) {
+    .mainContainer{
+        display: flex;
+        background-color: rgb(247, 248, 248);
+    }
+    
+    .titulo{
+        position: sticky;
+        top:0;
+        width: 25%;
+        height: 25%;
+        text-align: center;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+    
+    .text{
+        position:relative;
+        font-size: 1.5rem;  
+    }
+    
+    h1{
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    
+    h2{
+        position: relative;
+        margin-top: 1%;
+        margin-left: 8%;
+        font-size: .8rem;
+    }
+    
+    p{
+        position: relative;
+        text-align:start;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+    
