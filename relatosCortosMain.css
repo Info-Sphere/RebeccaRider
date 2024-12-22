@@ -10,7 +10,7 @@
 
 body{
     min-height: 100vh;
-    background: url(background.jpg) no-repeat;
+    background: url(../archived/images/background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -115,7 +115,7 @@ body{
 
 
 /*-------------------------------------xxx 992px xxx------------------------------*/
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .titulo{
     position: absolute;
     margin-left: 1%;
@@ -161,7 +161,7 @@ body{
   }
 }
 /*-------------------------------------xxx 768px xxx------------------------------*/
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .titulo{
     background-color:gree;
     position: absolute;
@@ -207,7 +207,7 @@ body{
 }
 
 /*-------------------------------------xxx 624 xxx------------------------------*/
-@media (max-width: 624px) {
+@media (min-width: 624px) {
   .titulo{
     background-color:gree;
     position: absolute;

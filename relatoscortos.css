@@ -1,0 +1,175 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfcf8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* --- 1. FLIP CARD (Tarjeta de presentación) --- */
+.flip-card-container {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Tarjeta a la izquierda */
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+    z-index: 1000;
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Flip Card: Frente y reverso con colores y opacidad */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.6s; /* Duración más rápida del giro */
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Frente de la tarjeta: Verde con opacidad */
+.flip-card-front {
+    background: rgba(76, 175, 80, 0.1); /* Verde con 70% de opacidad */
+    color: black;
+}
+
+/* Reverso de la tarjeta: Azul con opacidad */
+.flip-card-back {
+    background: rgba(33, 150, 243, 0.1); /* Azul con 70% de opacidad */
+    color: black;
+    transform: rotateY(180deg);
+}
+
+/* Animación solo al hacer hover o click */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* --- 2. LISTA NO ORDENADA (Estilo libro) --- */
+.book-page {
+    margin-top: 150px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    overflow: hidden;
+}
+
+.book-page h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.interactive-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.interactive-list li {
+    font-size: 1.5em;
+    margin: 15px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.interactive-list li a {
+    text-decoration: none;
+    color: inherit;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.interactive-list li:hover a {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Efecto al hacer clic */
+.interactive-list li.clicked a {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f44336;
+    transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+/* --- 3. RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+    .flip-card-container {
+        width: 200px;
+        height: 120px;
+    }
+
+    .flip-card {
+        font-size: 0.9em;
+    }
+
+    .book-page {
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .interactive-list li {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .flip-card-container {
+        width: 150px;
+        height: 100px;
+    }
+
+    .flip-card {
+        font-size: 0.8em;
+    }
+
+    .book-page {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    .interactive-list li {
+        font-size: 1em;
+    }
+}
+
+/* --- ESPACIO PARA FONDO --- */
+/* Aquí puedes agregar un fondo de página */
+body {
+    background-image: url('/archived/images/relatosCortos.jpg');
+    background-size:auto;
+    background-position: center;
+}

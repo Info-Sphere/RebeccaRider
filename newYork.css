@@ -1,0 +1,98 @@
+/* Estilos generales para la apariencia de un libro */
+body {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfcf8; /* Color crema suave */
+    color: #3e3e3e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-container {
+    width: 60%;
+    max-width: 800px;
+    min-height: 90vh;
+    margin: 40px auto;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    counter-reset: page;
+}
+
+/* Título principal */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+
+/* Subtítulo */
+h2 {
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    color: #6d6d6d;
+    margin-bottom: 30px;
+}
+
+/* Párrafos */
+p {
+    text-align: justify;
+    margin: 20px 0;
+    text-indent: 30px;
+    counter-increment: page;
+}
+
+/* Primera letra de cada párrafo estilizada */
+/*p::first-letter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c2c2c;
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+}*/
+
+/* Número de página para pantalla */
+/*.page-number::after {
+    content: "Página " counter(page);
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6d6d6d;
+    font-family: 'Georgia', serif;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}*/
+
+/* Paginación para impresión */
+/*@page {
+    margin: 20mm;
+}
+
+@media print {
+    .page-number {
+        position: running(pageCounter);
+        font-size: 12px;
+        text-align: center;
+        color: #000;
+        background: none;
+    }
+
+    @page {
+        @bottom-center {
+            content: "Página " counter(page);
+        }
+    }
+}*/
