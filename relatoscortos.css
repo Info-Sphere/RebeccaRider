@@ -169,7 +169,7 @@ body {
 /* --- ESPACIO PARA FONDO --- */
 /* Aquí puedes agregar un fondo de página */
 body {
-    background-image: url('/archived/images/relatosCortos.jpg');
+    background-image: url('relatosCortos.jpg');
     background-size:auto;
     background-position: center;
 }
