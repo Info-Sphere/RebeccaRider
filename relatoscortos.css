@@ -10,13 +10,29 @@ body {
     height: 100vh;
     justify-content: center;
     overflow: hidden;
+    background-image: url('/archived/images/relatosCortos3.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay to dim the image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(250, 248, 248, 0.5); /* Black overlay with 30% opacity */
+    z-index: -1; /* Make sure the overlay is behind the content */
 }
 
 /* --- 1. FLIP CARD (Tarjeta de presentación) --- */
 .flip-card-container {
     position: fixed;
     top: 20px;
-    left: 20px; /* Tarjeta a la izquierda */
+    left: 20px;
     width: 250px;
     height: 150px;
     perspective: 1000px;
@@ -28,20 +44,24 @@ body {
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
-/* Flip Card: Frente y reverso con colores y opacidad */
 .flip-card-inner {
     width: 100%;
     height: 100%;
     position: relative;
     text-align: center;
-    transition: transform 0.6s; /* Duración más rápida del giro */
+    transition: transform 0.6s;
     transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* --- Front and Back Styling --- */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -56,30 +76,44 @@ body {
     text-align: center;
 }
 
-/* Frente de la tarjeta: Verde con opacidad */
 .flip-card-front {
-    background: rgba(76, 175, 80, 0.1); /* Verde con 70% de opacidad */
+    background: rgba(255, 255, 255, 0.1); /* Light green */
     color: black;
 }
 
-/* Reverso de la tarjeta: Azul con opacidad */
 .flip-card-back {
-    background: rgba(33, 150, 243, 0.1); /* Azul con 70% de opacidad */
+    background: rgba(255, 255, 255, 0.1); /* Light blue */
     color: black;
     transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Adjust padding for better fit */
 }
 
-/* Animación solo al hacer hover o click */
+/* --- Link Styling on the Back of the Card --- */
+.flip-card-back a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem; /* Make text size slightly bigger */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.flip-card-back a:hover {
+    color: #4CAF50; /* Hover effect for links */
+}
+
+/* --- Hover Effect --- */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
-
 
 /* --- 2. LISTA NO ORDENADA (Estilo libro) --- */
 .book-page {
     margin-top: 150px;
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    background: rgba(255, 255, 255, 0.1); 
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 40px;
@@ -125,15 +159,47 @@ body {
     transition: font-size 0.5s ease, color 0.5s ease;
 }
 
-/* --- 3. RESPONSIVIDAD --- */
+
+/* --- Transition for the links --- */
+.interactive-list li a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.interactive-list li.clicked a {
+    font-size: 1em;  /* Enlarging the font when clicked */
+    color: #1d7911;    /* Change color */
+    transform: scale(1.1);  /* Slightly enlarge the link */
+}
+
+/* Add a small transition for the entire list item */
+.interactive-list li {
+    transition: transform 0.3s ease;
+}
+
+.interactive-list li.clicked {
+    transform: scale(1.05);  /* Slightly enlarge the entire list item */
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* Adjust card size and font for small to medium screens */
+
+
+
 @media (max-width: 768px) {
     .flip-card-container {
         width: 200px;
         height: 120px;
     }
 
-    .flip-card {
-        font-size: 0.9em;
+    .flip-card h3 {
+        font-size: 1rem; /* Adjust title size */
+    }
+
+    .flip-card-front, .flip-card-back {
+        font-size: 0.9rem;
     }
 
     .book-page {
@@ -146,14 +212,19 @@ body {
     }
 }
 
+/* Adjust card size and font for very small screens */
 @media (max-width: 480px) {
     .flip-card-container {
         width: 150px;
         height: 100px;
     }
 
-    .flip-card {
-        font-size: 0.8em;
+    .flip-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .flip-card-front, .flip-card-back {
+        font-size: 0.8rem;
     }
 
     .book-page {
@@ -166,10 +237,91 @@ body {
     }
 }
 
-/* --- ESPACIO PARA FONDO --- */
-/* Aquí puedes agregar un fondo de página */
-body {
-    background-image: url('relatosCortos.jpg');
-    background-size:auto;
-    background-position: center;
+/* --- Responsiveness for 375x667 (iPhone small phones) --- */
+@media (max-width: 375px) {
+    .flip-card-container {
+        width: 120px;  /* Smaller card size */
+        height: 80px;  /* Adjust height */
+    }
+
+    /* Ensure text on the front and back of the card is smaller */
+    .flip-card h3 {
+        font-size: 0.8rem;
+    }
+
+    .flip-card-front, .flip-card-back {
+        font-size: 0.7rem; /* Adjust text size for smaller screens */
+        padding: 5px;      /* Reduce padding */
+    }
+
+    /* Make sure the back content is centered */
+    .flip-card-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
 }
+
+/* --- Centering book-page on large displays --- */
+@media (min-width: 1200px) {
+    .book-page {
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/* --- Responsiveness for 465x667 (iPhone small phones) and smaller displays --- */
+@media (max-width: 465px) {
+    /* Centering the flip card */
+    .flip-card-container {
+        width: 170px;  /* Smaller card size */
+        height: 90px;  /* Adjust height */
+        position: absolute;
+        top: 10%;  /* Position the card above the center */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;  /* Add margin below to ensure space from the list */
+    }
+
+    .flip-card h3 {
+        font-size: 0.7rem; /* Smaller font size for the flip card */
+    }
+
+    .flip-card-front, .flip-card-back {
+        font-size: 0.6rem; /* Adjust text size for smaller screens */
+        padding: 5px;      /* Reduce padding */
+    }
+
+    /* Centering the unordered list (book page) */
+    .book-page {
+        font-size: 0.8em;  /* Adjust font size for better readability */
+        padding: 15px;
+        position: absolute;
+        top: 30%;  /* Position the list below the card */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;  /* Ensure it has some margin from the sides */
+        margin-top: 0;  /* Remove the default margin-top */
+        text-align: center;
+    }
+
+    .interactive-list li {
+        font-size: 1.2em;
+        margin: 10px 0; /* Adjust margins */
+    }
+}
+
+.interactive-list li a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.interactive-list li:hover a {
+    transform: scale(1.5); /* Slightly increase size on hover */
+    color: #FF4081; /* Change color */
+}
+
