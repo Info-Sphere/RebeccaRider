@@ -10,7 +10,7 @@ body {
     height: 100vh;
     justify-content: center;
     overflow: hidden;
-    background-image: url('/archived/images/relatosCortos3.jpg');
+    background-image: url('relatosCortos3.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
