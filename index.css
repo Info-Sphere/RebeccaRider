@@ -254,7 +254,7 @@ body {
     
 
     #check:checked~.navbar {
-        height: 23rem;
+        height: 45rem;
     }
 
     .navbar a {
