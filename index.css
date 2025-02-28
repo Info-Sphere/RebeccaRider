@@ -72,7 +72,7 @@ body {
 
 /* Welcome Message */
 .welcome-message {
-    font-size: 15px !important ;
+    font-size: 25px !important ;
     font-family: "Birthstone", sans-serif !important;
     position: absolute;
     top: 0;
@@ -177,7 +177,6 @@ body {
 
 .navbar a:hover {
     color: var(--primary-color);
-    transform: translateY(-10px);
 }
 
 /* Menu Icon */
