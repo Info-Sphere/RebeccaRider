@@ -149,11 +149,13 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 1.5rem;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /*This line needs to be added*/
 }
 
 .navbar a:hover {
     color: var(--hover-color);
+    transform: translateY(-10px);
 }
 
 /* Underline Effect */
