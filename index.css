@@ -177,6 +177,7 @@ body {
 
 .navbar a:hover {
     color: var(--primary-color);
+    transform: translateY(-10px);
 }
 
 /* Menu Icon */
