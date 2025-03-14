@@ -1,0 +1,180 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f6f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/archived/images/relatosCortos3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Overlay to dim the image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(23, 29, 20, 0.5);
+    z-index: -1;
+}
+
+/* --- 2. LISTA NO ORDENADA (Estilo libro) --- */
+.book-page {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    overflow: hidden;
+    max-width: 80%;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    min-height: 300px;
+}
+
+.book-page h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.interactive-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.interactive-list li {
+    font-size: 1.5em;
+    margin: 15px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.interactive-list li a {
+    text-decoration: none;
+    color: inherit;
+    transition: font-size 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.interactive-list li a:hover {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.interactive-list li.clicked a {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f44336;
+    transition: font-size 0.5s ease, color 0.5s ease;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        justify-content: flex-start; /* Adjusts the flex container to keep content aligned at the top */
+        padding: 20px;
+    }
+
+    .book-page {
+        font-size: 0.9em;
+        padding: 15px;
+        margin-top: 20px;
+        min-height: 220px;
+        width: 100%;
+    }
+
+    .interactive-list li {
+        font-size: 1em;
+    }
+}
+
+/* Small Phones (max-width: 375px) */
+@media (max-width: 375px) {
+    .book-page {
+        font-size: 0.8em;
+        padding: 10px;
+        margin-top: 20px;
+        min-height: 220px;
+        width: 100%;
+    }
+
+    .interactive-list li {
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .book-page {
+        font-size: 1em;
+        padding: 20px;
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .interactive-list li {
+        font-size: 1.2em;
+    }
+}
+
+/* Tablets Landscape or Small Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .book-page {
+        font-size: 1.1em;
+        padding: 25px;
+        width: 85%;
+    }
+
+    .interactive-list li {
+        font-size: 1.3em;
+    }
+}
+
+/* Large Displays (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .book-page {
+        margin-top: 0;
+        width: 60%;
+    }
+
+    .interactive-list li {
+        font-size: 1.5em;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #fdfcf8;
+    }
+
+    .book-page {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: #555;
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .interactive-list li a {
+        color: #ddd;
+    }
+
+    .interactive-list li a:hover {
+        color: #4CAF50;
+    }
+}
