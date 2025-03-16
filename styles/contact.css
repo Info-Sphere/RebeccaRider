@@ -1,3 +1,53 @@
+/* ... your existing CSS ... */
+
+.contact-item {
+    margin-bottom: 1.5rem;
+    display: flex; /* Use flexbox for icon alignment */
+    align-items: center; /* Center icons vertically */
+    justify-content: center; /* center items */
+    flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    width: 100%; /* Make h3 take full width */
+    text-align: center; /* center the heading */
+}
+
+.contact-item a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex; /* align icon and text */
+    align-items: center;
+    margin: 5px; /* add spacing */
+}
+
+.contact-item a:hover {
+    color: var(--link-hover-color);
+}
+
+.contact-item i { /* Style icons */
+    margin-right: 0.5rem;
+    font-size: 1.2rem; /* Icon size */
+    color: var(--accent-color); /* Icon color */
+}
+
+.whatsapp-available { /* Style for WhatsApp availability */
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: inline-block; /* allows margin and padding to work */
+}
+
+/* ... your existing CSS ... */
+
 /* Define color variables */
 :root {
     --primary-color: #0077b6;    /* Main blue color */
@@ -112,3 +162,4 @@ footer {
         font-size: 1.5rem;
     }
 }
+
