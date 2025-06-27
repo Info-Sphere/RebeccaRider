@@ -13,96 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✏️ Rebecca Raider</title>
-    <link rel="stylesheet" href="/styles/index2.css">
+    <link rel="stylesheet" href="/styles/index.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <style>
-        /* Dark Mode Specific Styles */
-        body.dark {
-            background-color: #121212; /* Very dark almost black background */
-            color: #f0f0f0; /* Light gray text for general body */
-        }
-
-        body.dark .header {
-            background-color: #1e1e1e; /* Darker header background */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Darker shadow */
-        }
-
-        body.dark .navbar a {
-            color: #bb86fc; /* Lighter purple for navigation links */
-            transition: color 0.3s ease;
-        }
-
-        body.dark .navbar a:hover {
-            color: #ffffff; /* White on hover for better contrast */
-        }
-
-        /* --- Navbar and Theme Toggle Button Layout --- */
-        /* Ensure the navbar is a flex container for proper alignment */
-        .navbar {
-            display: flex;
-            align-items: center; /* Vertically align items in the middle */
-            flex-wrap: nowrap; /* Prevent wrapping by default, let overflow handle or media queries */
-            gap: 1.5rem; /* Space between navigation items */
-            /* Add any existing padding or spacing for the navbar here if not in index2.css */
-        }
-
-        /* Styles for the dark mode toggle button itself */
-        .theme-toggle-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            width: 40px; /* Fixed width for the button */
-            height: 40px; /* Fixed height for the button */
-            display: flex; /* Use flexbox to center content */
-            align-items: center; /* Vertically center icon */
-            justify-content: center; /* Horizontally center icon */
-            padding: 0; /* Remove default padding to allow exact sizing */
-            border-radius: 50%;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            /* Default color for icons in light mode (e.g., matching header text/icons) */
-            color: #f0f0f0; /* This assumes your header text/icons are light on a dark header background */
-            flex-shrink: 0; /* Prevent the button from shrinking */
-        }
-
-        .theme-toggle-button i {
-            font-size: 1.5rem; /* Set icon size directly */
-            transition: color 0.3s ease; /* Smooth color transition for icons */
-            line-height: 1; /* Ensures vertical alignment is precise */
-        }
-
-        .theme-toggle-button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Dark mode specific color for the toggle button and its icons */
-        body.dark .theme-toggle-button {
-            color: #f0f0f0; /* Keep icons light in dark mode */
-        }
-
-        body.dark .theme-toggle-button:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Adjust the hero card and text for dark mode */
-        body.dark .hero-text h1,
-        body.dark .welcome-message h1 {
-            color: #e0e0e0; /* Slightly off-white for main titles */
-        }
-
-        /* Adjust the general menu/close icons in dark mode */
-        body.dark .icons #menu-icon,
-        body.dark .icons #close-icon {
-            color: #f0f0f0; /* Ensure these are also visible */
-        }
-
-        /* Crucial: Ensure the .hidden class correctly hides elements */
-        .hidden {
-            display: none !important;
-        }
-
-        /* If your index2.css has very specific rules, you might need to add !important
-           to some of these dark mode properties, but try without it first. */
-    </style>
 </head>
 <body>
     <header class="header">
@@ -129,8 +41,8 @@
 
     <video autoplay muted loop id="myVideo">
         <source src="/summer.mp4" type="video/mp4">
-        <source src="/summer.webm" type="video/webm">
-        <source src="/summer.ogg" type="video/ogg">
+        <source src="/spring.webm" type="video/webm">
+        <source src="/spring.ogg" type="video/ogg">
     </video>
 
     <div class="hero-card">
